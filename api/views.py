@@ -7,7 +7,7 @@ from rest_framework import status
 from rest_framework.permissions import IsAuthenticated 
 # Create your views here.
 class Api_View(APIView):
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
     def get(self, request, format=None):
         customers = Customer.published.all()
         serializer = CustomerSerializer(customers, many=True)
